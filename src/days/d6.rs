@@ -2,7 +2,7 @@ use std::collections::HashMap;
 use std::fs;
 
 pub fn solve(target: u8) {
-    let contents = fs::read_to_string("day_6/input.txt").expect("error");
+    let contents = fs::read_to_string("data/day_6/input.txt").expect("error");
     let lines: Vec<String> = contents.lines().filter_map(|s| s.parse().ok()).collect();
     let mut count = 0;
     let mut people = 0;

@@ -145,7 +145,7 @@ impl From<Vec<(&str, &str)>> for Passport {
 }
 
 pub fn solve(target: i32) {
-    let contents = fs::read_to_string("day_4/input.txt").expect("error");
+    let contents = fs::read_to_string("data/day_4/input.txt").expect("error");
     let lines: Vec<String> = contents.lines().filter_map(|s| s.parse().ok()).collect();
     let allowed: Vec<&str> = ["byr", "iyr", "eyr", "hgt", "hcl", "ecl", "pid"].to_vec();
     let mut count = 0;

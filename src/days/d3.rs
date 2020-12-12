@@ -1,7 +1,7 @@
 use std::fs;
 
 pub fn solve(target: Vec<(usize, usize)>) {
-    let contents = fs::read_to_string("day_3/input.txt").expect("error");
+    let contents = fs::read_to_string("data/day_3/input.txt").expect("error");
     let lines: Vec<String> = contents.lines().filter_map(|s| s.parse().ok()).collect();
     let mut results = Vec::new();
 

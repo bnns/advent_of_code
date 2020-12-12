@@ -14,7 +14,7 @@ fn missing(list: &mut Vec<u32>) -> u32 {
 }
 
 pub fn solve(target: u8) {
-    let contents = fs::read_to_string("day_5/input.txt").expect("error");
+    let contents = fs::read_to_string("data/day_5/input.txt").expect("error");
     let lines: Vec<String> = contents.lines().filter_map(|s| s.parse().ok()).collect();
     let mut count = lines.iter().map(|l| {
         let (row, seat) = l.split("")

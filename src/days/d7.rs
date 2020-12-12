@@ -49,7 +49,7 @@ fn count_all(hash: &HashSet<&Bag>, target: &Bag) -> u32 {
 }
 
 pub fn solve(target: u8) {
-    let contents = fs::read_to_string("day_7/input.txt").expect("error");
+    let contents = fs::read_to_string("data/day_7/input.txt").expect("error");
     let lines: Vec<String> = contents.lines().filter_map(|s| s.parse().ok()).collect();
     let re = Regex::new(r"(\d) (.*) bags?\.?").unwrap();
     let rules: Vec<Bag> = lines

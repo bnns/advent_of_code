@@ -1,7 +1,7 @@
 use std::fs;
 
 pub fn solve_2() {
-    let contents = fs::read_to_string("day_1/input.txt").expect("error");
+    let contents = fs::read_to_string("data/day_1/input.txt").expect("error");
     let mut numbers: Vec<i32> = contents.lines().filter_map(|s| s.parse().ok()).collect();
 
     numbers.sort();
@@ -31,7 +31,7 @@ pub fn solve_2() {
 }
 
 pub fn solve_1() {
-    let contents = fs::read_to_string("day_1/input.txt").expect("error");
+    let contents = fs::read_to_string("data/day_1/input.txt").expect("error");
     let numbers: Vec<i32> = contents.lines().map(|s| s.parse().unwrap()).collect();
     let numbers_clone = numbers.clone();
     for num in numbers_clone {

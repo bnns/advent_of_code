@@ -16,7 +16,7 @@ fn check_pw_range(password: &str, pattern: &str, min: i32, max: i32) -> bool {
 }
 
 pub fn solve(target: i32) {
-    let contents = fs::read_to_string("day_2/input.txt").expect("error");
+    let contents = fs::read_to_string("data/day_2/input.txt").expect("error");
     let passwords: Vec<String> = contents.lines().filter_map(|s| s.parse().ok()).collect();
 
     let total = passwords.iter().fold(0, |acc, x| {
