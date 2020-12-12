@@ -14,8 +14,7 @@ struct Passport {
     hgt: Option<(i32, Metric)>,
     hcl: Option<String>,
     ecl: Option<String>,
-    pid: Option<String>,
-    cid: Option<String>,
+    pid: Option<String>
 }
 
 impl Passport {
@@ -28,7 +27,6 @@ impl Passport {
             hcl: None,
             ecl: None,
             pid: None,
-            cid: None,
         }
     }
     fn is_valid(&self) -> bool {
@@ -106,10 +104,6 @@ impl Passport {
             None
         }
     }
-
-    fn convert_cid(s: &str) -> Option<String> {
-        Some(String::from(s))
-    }
 }
 
 impl From<Vec<(&str, &str)>> for Passport {
@@ -143,10 +137,6 @@ impl From<Vec<(&str, &str)>> for Passport {
                 },
                 "pid" => Passport {
                     pid: Passport::convert_pid(v),
-                    ..acc
-                },
-                "cid" => Passport {
-                    cid: Passport::convert_cid(v),
                     ..acc
                 },
                 _ => Passport { ..acc },

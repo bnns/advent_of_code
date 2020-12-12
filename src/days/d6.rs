@@ -13,17 +13,20 @@ pub fn solve(target: u8) {
             count += if target == 1 {
                 answers.len()
             } else if target == 2 {
-                answers.iter().filter(|(_, &val)| val == people).collect::<Vec<_>>().len()
-            } else { 0 };
+                answers
+                    .iter()
+                    .filter(|(_, &val)| val == people)
+                    .collect::<Vec<_>>()
+                    .len()
+            } else {
+                0
+            };
             answers = HashMap::new();
             people = 0;
         } else {
             people += 1;
             for c in row.split_terminator("").skip(1) {
-                match answers.get(c) {
-                    None => answers.insert(c, 1),
-                    Some(count) => answers.insert(c, 1 + count),
-                };
+                *answers.entry(c).or_insert(1) += 1;
             }
         }
     }

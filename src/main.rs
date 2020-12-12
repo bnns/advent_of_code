@@ -17,6 +17,8 @@ fn main() {
         "5.2" => days::d5::solve(2),
         "6.1" => days::d6::solve(1),
         "6.2" => days::d6::solve(2),
+        "7.1" => days::d7::solve(1),
+        "7.2" => days::d7::solve(2),
         _ => println!("bad input")
     }
 }
