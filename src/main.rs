@@ -23,6 +23,8 @@ fn main() {
         "8.2" => days::d8::solve(2),
         "9.1" => days::d9::solve(1),
         "9.2" => days::d9::solve(2),
+        "10.1" => days::d10::solve(1),
+        "10.2" => days::d10::solve(2),
         _ => println!("bad input")
     }
 }
