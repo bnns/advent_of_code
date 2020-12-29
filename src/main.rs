@@ -1,6 +1,9 @@
 use std::env;
 pub mod days;
 
+#[macro_use]
+extern crate lazy_static;
+
 fn main() {
     let args: Vec<String> = env::args().collect();
     let day = &args[1];
@@ -39,6 +42,8 @@ fn main() {
         "16.2" => days::d16::solve(2),
         "17.1" => days::d17::solve(1),
         "17.2" => days::d17::solve(2),
+        "18.1" => days::d18::solve(1),
+        "18.2" => days::d18::solve(2),
         _ => println!("bad input")
     }
 }
