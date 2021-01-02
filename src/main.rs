@@ -44,6 +44,8 @@ fn main() {
         "17.2" => days::d17::solve(2),
         "18.1" => days::d18::solve(1),
         "18.2" => days::d18::solve(2),
+        "19.1" => days::d19::solve(1),
+        "19.2" => days::d19::solve(2),
         _ => println!("bad input")
     }
 }
